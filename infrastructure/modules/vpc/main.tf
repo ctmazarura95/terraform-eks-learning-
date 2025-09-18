@@ -92,6 +92,7 @@ resource "aws_route_table" "private-rt" {
   }
 }
 
+
 resource "aws_route_table_association" "private-rt-association" {
   count = length(var.private_subnet)
   subnet_id = aws_subnet.private[count.index].id
